@@ -9,7 +9,7 @@
 body {
     margin: 0;
     /* Set background image for the entire page */
-    background-image: url('images/background3.png');
+    background-image: url('images/goodbackground.jpg');
     background-size: cover; /* Cover the entire viewport */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent repeating the image */
@@ -406,19 +406,21 @@ h1 {
 /* Calendar Container Styles */
 .calendar-container {
     background-color: #274e13; /* Matching green color */
-    padding: 20px;
+    padding: 10px; /* Reduced padding for a more compact look */
     border-radius: 8px;
     margin: 20px auto;
-    width: 840px; /* Adjusted width to fully contain the iframe */
-    max-width: 100%; /* Ensure it doesn't exceed viewport width */
+    width: 90%; /* Adjusted width to be more responsive */
+    max-width: 840px; /* Set a maximum width to avoid excessive stretching */
     text-align: center; /* Center-align text */
     overflow: hidden; /* Hide any overflow content */
 }
 
 .calendar-container h1 {
     color: #f1c232; /* Yellow text color */
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Reduced margin for a tighter appearance */
 }
+
+
 
 iframe {
     width: 800px; /* Fixed width to maintain original size */

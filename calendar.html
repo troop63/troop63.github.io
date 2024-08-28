@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar - Troop 63</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Default styling for larger screens */
+        .calendar-container {
+            width: 100%;
+            margin: 0 auto; /* Center the calendar */
+            padding: 10px; /* Adjust padding */
+            box-sizing: border-box; /* Include padding and borders in width */
+        }
+
+        .calendar-container iframe {
+            width: 800px; /* Original width */
+            height: 600px; /* Original height */
+            border: 0; /* Remove default border */
+            display: block; /* Ensure iframe is a block element */
+            margin: 0 auto; /* Center the iframe */
+        }
+
+        /* Responsive styles for smaller screens */
+        @media only screen and (max-width: 768px) {
+            .calendar-container iframe {
+                width: 100%; /* Make iframe full width on smaller screens */
+                height: 400px; /* Adjust height for smaller screens */
+                max-width: 100%; /* Prevent iframe from exceeding container width */
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -31,7 +57,7 @@
     <div class="main">
         <div class="calendar-container">
             <h1>Troop 63 Calendar</h1>
-            <iframe src="https://calendar.google.com/calendar/embed?src=5f4c2ecf429c280dc09a5814ad486c3463d787814a77825fcffc928ac3fcfbcf%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            <iframe src="https://calendar.google.com/calendar/embed?src=5f4c2ecf429c280dc09a5814ad486c3463d787814a77825fcffc928ac3fcfbcf%40group.calendar.google.com&ctz=America%2FNew_York" frameborder="0" scrolling="no"></iframe>
         </div>
     </div>
 
