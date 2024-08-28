@@ -45,3 +45,21 @@ window.addEventListener('resize', () => {
     slideWidth = slides.children[0].clientWidth;
     updateSlidePosition();
 });
+// app.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuButton = document.getElementById('mobile-menu');
+    const navbarMenu = document.querySelector('.navbar__menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+        // Toggle the 'active' class on the menu
+        navbarMenu.classList.toggle('active');
+    });
+
+    // Optional: Close the menu if clicking outside of it
+    document.addEventListener('click', (event) => {
+        if (!navbarMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+            navbarMenu.classList.remove('active');
+        }
+    });
+});

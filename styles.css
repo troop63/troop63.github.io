@@ -517,3 +517,61 @@ iframe {
     display: block; /* Ensures no extra spacing below the image */
     margin: 0 auto; /* Centers the image horizontally */
 }
+/* Hide menu by default on all devices */
+.navbar__menu {
+    display: flex; /* Default display for desktop */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    /* Hide menu items on mobile */
+    .navbar__menu {
+        display: none; /* Hide the menu initially */
+        flex-direction: column;
+        position: absolute;
+        top: 80px; /* Adjust based on navbar height */
+        left: 0;
+        width: 100%;
+        background-color: #131313; /* Match the background color */
+        overflow: hidden; /* Hide overflow */
+        transition: max-height 0.3s ease-out; /* Smooth slide effect */
+        max-height: 0; /* Collapse initially */
+    }
+
+    /* Show the menu when active */
+    .navbar__menu.active {
+        display: flex; /* Show the menu */
+        max-height: 500px; /* Adjust based on the number of menu items */
+    }
+
+    /* Style menu items */
+    .navbar__links {
+        color: #fff;
+        text-decoration: none;
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #444; /* Add separator lines between items */
+    }
+
+    /* Remove border from the last item */
+    .navbar__links:last-child {
+        border-bottom: none;
+    }
+
+    /* Toggle button styles */
+    .navbar__toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .navbar__toggle .bar {
+        background-color: #fff;
+        height: 3px;
+        width: 25px;
+        margin: 4px 0;
+    }
+}
