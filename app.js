@@ -53,3 +53,13 @@ document.addEventListener('DOMContentLoaded', () => {
         updateSlidePosition();
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const menuItems = document.querySelectorAll('.menu-item');
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', function() {
+            menuItems.forEach(i => i.classList.remove('active')); // Remove 'active' class from all items
+            this.classList.add('active'); // Add 'active' class to the clicked item
+        });
+    });
+});
