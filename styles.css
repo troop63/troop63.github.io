@@ -1,0 +1,553 @@
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    /* Set background image for the entire page */
+    background-image: url('images/background3.png');
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
+/* Navbar Styles */
+.navbar {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px; /* Adjust padding if needed */
+}
+
+/* Logo Styles */
+#navbar__logo {
+    display: flex;
+    align-items: center;
+    height: 60px; /* Adjust if needed */
+    margin-right: auto; /* Push logo to the left */
+}
+
+#navbar__logo img {
+    height: 100%; /* Make sure the logo scales properly */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Navbar Menu Styles */
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    flex: 1; /* Ensure the menu takes available space */
+    justify-content: flex-end; /* Align menu items to the right */
+}
+
+.navbar__item {
+    display: flex;
+    align-items: center;
+    margin: 0 1rem; /* Space between menu items */
+}
+
+.navbar__links {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Button Styles */
+.navbar__btn {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background: #f77062;
+    color: #fff;
+}
+
+.button:hover {
+    background: #4837ff;
+    transition: all 0.3s ease;
+}
+
+.navbar__links:hover {
+    color: #f77062;
+    transition: all 0.3s ease;
+}
+
+/* Main Content Styles */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px; /* Adjust top padding to create space */
+}
+
+/* Green Container for Welcome Text */
+.welcome-container {
+    background-color: #274e13; /* Matching green color */
+    padding: 20px; /* Add padding to ensure space around the text */
+    border-radius: 8px; /* Optional: for rounded corners */
+    margin-bottom: 20px; /* Add space below the container */
+    text-align: center; /* Center-align text */
+}
+
+h1 {
+    color: #f1c232; /* Yellow text color */
+    font-size: 2rem; /* Adjusted font size for better visibility */
+    margin: 0;
+}
+
+/* Green Container for Carousel */
+.carousel-container {
+    background-color: #274e13; /* Matching green color */
+    padding: 20px; /* Add padding to ensure space around the carousel */
+    border-radius: 8px; /* Optional: for rounded corners */
+    margin: 20px auto; /* Center the container and add vertical spacing */
+    max-width: 820px; /* Adjusted to accommodate padding */
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Fixed width for better control */
+    margin: 0; /* Removed margin to fit within the container */
+    overflow: hidden;
+}
+
+.carousel__wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.carousel__slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel__slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel__slide img {
+    width: 100%;
+    display: block;
+}
+
+.carousel__arrow {
+    background-color: #fff;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.carousel__arrow--left {
+    left: 10px;
+}
+
+.carousel__arrow--right {
+    right: 10px;
+}
+
+/* Troop Information Section Styles */
+.troop-info {
+    background-color: #274e13; /* Matching green color */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.troop-info h2 {
+    color: #f1c232; /* Yellow text color */
+    margin-bottom: 10px;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hide overflow text if it exceeds container width */
+    text-overflow: ellipsis; /* Adds ellipsis (...) if text overflows */
+    width: 100%; /* Ensure full width */
+    display: inline-block; /* Ensure it stays on one line */
+}
+
+.troop-info p {
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Contact Us Section Styles */
+.contact-us {
+    background-color: #274e13; /* Matching green color */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact-us h2 {
+    color: #f1c232; /* Yellow text color */
+    margin-bottom: 10px;
+}
+
+.contact-us p {
+    color: #fff;
+    line-height: 1.6;
+}
+
+.contact-us a {
+    color: #f1c232; /* Yellow link color */
+    text-decoration: none;
+}
+
+.contact-us a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar__menu {
+        display: none; /* Hide menu on small screens */
+    }
+
+    .navbar__toggle {
+        display: flex;
+    }
+
+    .navbar__toggle.is-active + .navbar__menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background: #131313;
+    }
+
+    .navbar__links {
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #fff;
+    }
+
+    .navbar__links:last-child {
+        border-bottom: none;
+    }
+}
+/* About Us Section Styles */
+.about-container {
+    background-color: #274e13; /* Matching green color */
+    padding: 20px; /* Add padding to ensure space around the text */
+    border-radius: 8px; /* Optional: for rounded corners */
+    margin: 20px auto; /* Center the container and add vertical spacing */
+    max-width: 800px; /* Adjusted to accommodate padding */
+    text-align: center; /* Center-align text */
+}
+
+.about-container h1 {
+    color: #f1c232; /* Yellow text color */
+    font-size: 2rem; /* Adjusted font size for better visibility */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.about-image {
+    width: 100%; /* Make the image responsive */
+    max-width: 700px; /* Set a max-width to keep it from being too large */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: for rounded corners */
+    margin-bottom: 20px; /* Space below the image */
+}
+
+.about-section h2 {
+    color: #f1c232; /* Yellow text color */
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    color: #fff;
+    line-height: 1.6;
+}
+/* Container for Scouts page content */
+.scouts-container {
+    background-color: #274e13; /* Matching green color */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* Scouts Page Styles */
+.scouts-container {
+    background-color: #274e13; /* Matching green color */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.scouts-header {
+    text-align: center; /* Center the text inside this div */
+    margin-bottom: 20px;
+}
+
+.scouts-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.scouts-info {
+    color: #fff; /* Ensure text is readable */
+}
+
+.scouts-info h1, .scouts-info h2, .scouts-info p {
+    margin: 10px 0;
+}
+
+.scouts-info h1 {
+    font-size: 2.5rem; /* Adjust size as needed */
+    color: #f1c232; /* Yellow color for main heading */
+}
+
+.scouts-info h2 {
+    font-size: 1.8rem; /* Adjust size as needed */
+    color: #f1c232; /* Yellow color for subheadings */
+}
+
+.scouts-info p {
+    font-size: 1rem; /* Adjust size as needed */
+    line-height: 1.6;
+}
+
+
+/* Container for Adults page content */
+.adults-container {
+    background-color: #274e13; /* Matching green color */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* Information section styles */
+.adults-info {
+    color: #fff;
+    line-height: 1.6;
+}
+
+.adults-info h2 {
+    color: #f1c232; /* Yellow text color */
+    margin-bottom: 10px;
+}
+
+.adults-info ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.adults-info li {
+    margin-bottom: 10px;
+}
+
+/* Calendar Container Styles */
+.calendar-container {
+    background-color: #274e13; /* Matching green color */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 840px; /* Adjusted width to fully contain the iframe */
+    max-width: 100%; /* Ensure it doesn't exceed viewport width */
+    text-align: center; /* Center-align text */
+    overflow: hidden; /* Hide any overflow content */
+}
+
+.calendar-container h1 {
+    color: #f1c232; /* Yellow text color */
+    margin-bottom: 20px;
+}
+
+iframe {
+    width: 800px; /* Fixed width to maintain original size */
+    height: 600px; /* Fixed height to maintain original size */
+    border: 0;
+}
+
+/* Camping Container Styles */
+.camping-container {
+    background-color: #274e13; /* Matching green color */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 840px; /* Adjust width as needed */
+    max-width: 100%; /* Ensure it doesn't exceed viewport width */
+    text-align: center; /* Center-align text */
+}
+
+.camping-container h1 {
+    color: #f1c232; /* Yellow text color */
+    margin-bottom: 20px;
+}
+
+.camping-image {
+    width: 100%;
+    max-width: 800px; /* Ensure image fits well */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.camping-info h2,
+.camping-info h3,
+.camping-info h4 {
+    color: #f1c232; /* Yellow text color for headings */
+    margin-bottom: 10px;
+}
+
+.camping-info p,
+.camping-info ul {
+    color: #fff; /* White text color for paragraphs and lists */
+    line-height: 1.6;
+    text-align: left; /* Align list items to the left */
+    margin: 0 auto; /* Center align lists and paragraphs */
+}
+
+.camping-info ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+/* Styles for dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333; /* Adjust the background color as needed */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #f1c232; /* Yellow color for dropdown links */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757; /* Hover effect */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Adjust dropdown link font size if needed */
+.dropdown-link {
+    font-size: 1rem;
+}
+/* Styles for the Camping page image */
+.camping-container {
+    max-width: 100%;
+    overflow: hidden; /* Ensures that any overflow content is hidden */
+}
+
+.camping-img {
+    max-width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures no extra spacing below the image */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+/* Announcements Section Styles */
+.announcements {
+    background-color: #1e4d2e; /* Dark green background */
+    color: #f1c232; /* Yellow text color */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.announcements__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.announcements h2 {
+    margin-bottom: 10px;
+}
+
+.announcements p {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #fff; /* Set text color to white */
+}
+
+
+/* Adults Section Styles */
+.adults-container {
+    background-color: #274e13; /* Matching green color */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center; /* Center-align text */
+}
+
+.adults-image {
+    width: 100%; /* Make the image responsive */
+    max-width: 600px; /* Limit maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: for rounded corners */
+    margin: 20px auto; /* Center the image horizontally */
+}
+
+.adults-section h2, .adults-section h3 {
+    color: #f1c232; /* Yellow text color for subheadings */
+    margin-bottom: 10px;
+    text-align: center; /* Center the heading text */
+}
+
+.adults-section p {
+    color: #fff;
+    line-height: 1.6;
+    text-align: center; /* Center the paragraph text */
+}
