@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Troop Members Only - Troop 63</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        // Simple password protection
+        const password = "Troop63"; // Change this to your desired password
+        let userInput = prompt("Enter password to view this page:");
+        if (userInput !== password) {
+            alert("Incorrect password. You will be redirected to the homepage.");
+            window.location.href = "index.html";
+        }
+    </script>
 </head>
 <body>
     <nav class="navbar">
