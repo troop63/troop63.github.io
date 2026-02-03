@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Troop 63</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Dropdown menu styles */
+        .navbar__item.dropdown {
+            position: relative;
+        }
+        .navbar__item.dropdown .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #333;
+            min-width: 180px;
+            z-index: 1000;
+        }
+        .navbar__item.dropdown .dropdown-content a {
+            color: #fff;
+            padding: 10px 15px;
+            display: block;
+            text-decoration: none;
+        }
+        .navbar__item.dropdown .dropdown-content a:hover {
+            background-color: #555;
+        }
+        .navbar__item.dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -25,7 +51,7 @@
                 <li class="navbar__item"><a href="scouts.html" class="navbar__links">Scouts</a></li>
                 <li class="navbar__item"><a href="adults.html" class="navbar__links">Adults</a></li>
                 <li class="navbar__item dropdown">
-                    <a href="members.html" class="navbar__links dropdown-link">Troop Members Only</a>
+                    <a href="members.html" class="navbar__links dropdown-link">Troop Members Only &#9662;</a>
                     <div class="dropdown-content">
                         <a href="members.html">Members Home</a>
                         <!-- Add more member-specific links here -->
