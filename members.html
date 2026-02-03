@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Troop Members Only - Troop 63</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
     <script>
+        // Simple password protection
         const password = "troop63"; // set your password here
-        const userPass = prompt("Enter the password to access Troop Members Only:");
-        if (userPass !== password) {
-            alert("Incorrect password! Redirecting to Home page.");
+        const enteredPassword = prompt("Enter password to access this page:");
+        if (enteredPassword !== password) {
+            alert("Incorrect password. Redirecting to home page.");
             window.location.href = "index.html";
         }
     </script>
-
-    <!-- Navbar -->
+</head>
+<body>
     <nav class="navbar">
         <div class="navbar__container">
             <a href="index.html" id="navbar__logo">
@@ -42,45 +41,47 @@
     <div class="main">
         <div class="welcome-container" style="text-align:center;">
             <h1>Troop Members Only</h1>
-            <p>Welcome, scouts! This page is for troop members to access member-only resources, schedules, and information.</p>
         </div>
 
         <!-- Monday Memo Section -->
-        <section class="troop-info" style="text-align:left;">
-            <h2>Monday Memo</h2>
-            <p>Weekly updates and important announcements for troop members.</p>
-            <ul>
-                <li>Our next meeting is Tuesday at 7 PM.</li>
-                <li>Scoutmaster's notes: Remember to bring your camping gear for the upcoming campout.</li>
-                <li>Upcoming merit badge sessions and workshops.</li>
-            </ul>
+        <section class="announcements" style="text-align:left;">
+            <div class="announcements__container">
+                <h2>Monday Memo</h2>
+                <h3>Meeting Agenda</h3>
+                <ul>
+                    <li>PLC at 7pm</li>
+                    <li>Demonstration of how to build an A frame</li>
+                    <li>Game time</li>
+                    <li>Capture the doge ball (10 min)</li>
+                    <li>Dodgeball (10 min)</li>
+                </ul>
+
+                <h3>Important Info</h3>
+                <p>BORs are next week 2/10 come prepared with requirements done if you need a scout master conference this week. For those of you that don’t know, BOR stands for board of review. This is a panel of parents that will ask you a couple questions about rank advancement or your favorite thing that happened during your time of advancement. If you sign up for a BOR you should have all the requirements for that rank done besides the actual BOR. There is no need to be nervous; it’s all friendly faces asking basic questions.</p>
+                <p>Remember how much fun you had as a cub scout participating in the Pinewood Derby? Sign up here to help run it.</p>
+                <p>Philadelphia trip is 2/14-16 permission slip.</p>
+                <p>Philadelphia permission slip due this meeting 2/3.</p>
+                <p>The troop needs a new bugler; if you are interested please reach out to me.</p>
+                <p>Early bird special for Beach Jam is due 2/17 permission slip.</p>
+                <p>Troop Calendar</p>
+                <p>Best,</p>
+                <p>Ashton Green</p>
+            </div>
         </section>
 
-        <!-- Forms & Documents Section -->
+        <!-- Forms and Documents Section -->
         <section class="troop-info" style="text-align:left;">
-            <h2>Forms & Documents</h2>
-            <p>Important forms and documents for troop activities. (Coming soon—check back for updates!)</p>
-            <ul>
-                <li>Permission slips for campouts</li>
-                <li>Medical forms</li>
-                <li>Merit badge worksheets</li>
-            </ul>
+            <h2>Permission Trip - Philadelphia</h2>
+            <p><a href="https://docs.google.com/document/d/1_GcSzgRTp1zyV971HuXFLuCSKt6PY11a/edit" target="_blank">Philadelphia Permission Slip</a></p>
         </section>
 
-        <!-- Resources Section -->
-        <section class="troop-info" style="text-align:left;">
-            <h2>Resources</h2>
-            <p>Helpful resources for scouts to use in their activities and projects.</p>
-            <ul>
-                <li>Scout Handbook links and PDF downloads</li>
-                <li>Merit badge requirement guides</li>
-                <li>Tips for camping, hiking, and outdoor skills</li>
-                <li>Leadership guides and scout responsibilities</li>
-            </ul>
+        <!-- Leadership Section -->
+        <section class="contact-us" style="text-align:left;">
+            <h2>Leadership</h2>
+            <p>Details coming soon.</p>
         </section>
     </div>
 
-    <!-- Footer -->
     <footer style="text-align:center; margin-top:40px; font-size:14px;">
         © 2026 Troop 63
     </footer>
