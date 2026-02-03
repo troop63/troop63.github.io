@@ -4,34 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scouts - Troop 63</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Dropdown menu styles for top-right "Troop Members Only" */
+        .navbar__item.dropdown {
+            position: relative;
+        }
+        .navbar__item.dropdown .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #333;
+            min-width: 180px;
+            z-index: 1000;
+        }
+        .navbar__item.dropdown .dropdown-content a {
+            color: #fff;
+            padding: 10px 15px;
+            display: block;
+            text-decoration: none;
+        }
+        .navbar__item.dropdown .dropdown-content a:hover {
+            background-color: #555;
+        }
+        .navbar__item.dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="navbar__container">
-            <a href="/" id="navbar__logo">
+            <a href="index.html" id="navbar__logo">
                 <img src="images/BSA Corporate Logo - Troop 63 - Transparent_edited.webp" alt="Troop 63 Logo">
             </a>
-            <div class="navbar__toggle" id="mobile-menu">
+            <div class="navbar__toggle" id="mobile-menu" aria-label="Toggle navigation">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
             <ul class="navbar__menu">
-                <li class="navbar__item"><a href="/" class="navbar__links">Home</a></li>
-                <li class="navbar__item"><a href="/calendar.html" class="navbar__links">Calendar</a></li>
-                <li class="navbar__item"><a href="/about.html" class="navbar__links">About Us</a></li>
-                <li class="navbar__item"><a href="/camping.html" class="navbar__links">Camping</a></li>
-                
-                <!-- Updated Scouts dropdown -->
-                <li class="navbar__item navbar__dropdown">
-                    <a href="/scouts.html" class="navbar__links">Scouts &#9662;</a>
-                    <ul class="navbar__dropdown-menu">
-                        <li><a href="/members.html" class="navbar__links">Troop Members Only</a></li>
-                    </ul>
+                <li class="navbar__item"><a href="index.html" class="navbar__links">Home</a></li>
+                <li class="navbar__item"><a href="calendar.html" class="navbar__links">Calendar</a></li>
+                <li class="navbar__item"><a href="about.html" class="navbar__links">About Us</a></li>
+                <li class="navbar__item"><a href="camping.html" class="navbar__links">Camping</a></li>
+                <li class="navbar__item"><a href="scouts.html" class="navbar__links">Scouts</a></li>
+                <li class="navbar__item"><a href="adults.html" class="navbar__links">Adults</a></li>
+                <li class="navbar__item dropdown">
+                    <a href="members.html" class="navbar__links dropdown-link">Troop Members Only &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="members.html">Members Home</a>
+                        <!-- Add more member-specific links here -->
+                    </div>
                 </li>
-                
-                <li class="navbar__item"><a href="/adults.html" class="navbar__links">Adults</a></li>
             </ul>
         </div>
     </nav>
@@ -64,6 +89,6 @@
         </div>
     </div>
 
-    <script src="app.js"></script> <!-- Link to your JavaScript file -->
+    <script src="app.js"></script>
 </body>
 </html>
