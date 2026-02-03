@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <script>
+        const password = "troop63"; // set your password here
+        const userPass = prompt("Enter the password to access Troop Members Only:");
+        if (userPass !== password) {
+            alert("Incorrect password! Redirecting to Home page.");
+            window.location.href = "index.html";
+        }
+    </script>
+
     <!-- Navbar -->
     <nav class="navbar">
         <div class="navbar__container">
@@ -31,59 +40,42 @@
     </nav>
 
     <div class="main">
-        <!-- Welcome Message -->
         <div class="welcome-container" style="text-align:center;">
             <h1>Troop Members Only</h1>
-            <p>Welcome, scouts! This page is for troop members to access member-only resources, schedules, and updates.</p>
+            <p>Welcome, scouts! This page is for troop members to access member-only resources, schedules, and information.</p>
         </div>
 
-        <!-- Monday Memo -->
+        <!-- Monday Memo Section -->
         <section class="troop-info" style="text-align:left;">
             <h2>Monday Memo</h2>
-            <p>Stay updated with troop news, changes in schedule, and leadership announcements. Example: "Next troop meeting is Tuesday, 9/3/24 at 7:30 PM."</p>
-        </section>
-
-        <!-- Meeting & Event Calendar -->
-        <section class="troop-info" style="text-align:left;">
-            <h2>Meeting & Event Calendar</h2>
-            <table style="width:100%; border-collapse: collapse;">
-                <tr>
-                    <th style="border:1px solid #fff; padding:8px;">Date</th>
-                    <th style="border:1px solid #fff; padding:8px;">Event</th>
-                    <th style="border:1px solid #fff; padding:8px;">Location</th>
-                </tr>
-                <tr>
-                    <td style="border:1px solid #fff; padding:8px;">9/3/24</td>
-                    <td style="border:1px solid #fff; padding:8px;">Troop Meeting</td>
-                    <td style="border:1px solid #fff; padding:8px;">Presbyterian Church</td>
-                </tr>
-                <tr>
-                    <td style="border:1px solid #fff; padding:8px;">9/15/24</td>
-                    <td style="border:1px solid #fff; padding:8px;">Camping Trip</td>
-                    <td style="border:1px solid #fff; padding:8px;">Hickory Park</td>
-                </tr>
-            </table>
-        </section>
-
-        <!-- Forms & Documents -->
-        <section class="troop-info" style="text-align:left;">
-            <h2>Forms & Documents</h2>
+            <p>Weekly updates and important announcements for troop members.</p>
             <ul>
-                <li><a href="#">Permission Slip - Summer Camp 2026</a></li>
-                <li><a href="#">Merit Badge Sign-Up Form</a></li>
-                <li><a href="#">Troop Handbook</a></li>
+                <li>Our next meeting is Tuesday at 7 PM.</li>
+                <li>Scoutmaster's notes: Remember to bring your camping gear for the upcoming campout.</li>
+                <li>Upcoming merit badge sessions and workshops.</li>
             </ul>
         </section>
 
-        <!-- Resources -->
+        <!-- Forms & Documents Section -->
+        <section class="troop-info" style="text-align:left;">
+            <h2>Forms & Documents</h2>
+            <p>Important forms and documents for troop activities. (Coming soon—check back for updates!)</p>
+            <ul>
+                <li>Permission slips for campouts</li>
+                <li>Medical forms</li>
+                <li>Merit badge worksheets</li>
+            </ul>
+        </section>
+
+        <!-- Resources Section -->
         <section class="troop-info" style="text-align:left;">
             <h2>Resources</h2>
+            <p>Helpful resources for scouts to use in their activities and projects.</p>
             <ul>
-                <li><a href="#">Scout Oath & Law</a></li>
-                <li><a href="#">First Aid Guide</a></li>
-                <li><a href="#">Camping Checklist</a></li>
-                <li><a href="#">Merit Badge Requirements</a></li>
-                <li><a href="#">Leadership Guide</a></li>
+                <li>Scout Handbook links and PDF downloads</li>
+                <li>Merit badge requirement guides</li>
+                <li>Tips for camping, hiking, and outdoor skills</li>
+                <li>Leadership guides and scout responsibilities</li>
             </ul>
         </section>
     </div>
