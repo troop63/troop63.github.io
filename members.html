@@ -5,17 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Troop Members Only - Troop 63</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        // Simple password protection
-        const password = "Troop63"; // Change this to your desired password
-        let userInput = prompt("Enter password to view this page:");
-        if (userInput !== password) {
-            alert("Incorrect password. You will be redirected to the homepage.");
-            window.location.href = "index.html";
-        }
-    </script>
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="navbar__container">
             <a href="index.html" id="navbar__logo">
@@ -39,12 +31,64 @@
     </nav>
 
     <div class="main">
+        <!-- Welcome Message -->
         <div class="welcome-container" style="text-align:center;">
             <h1>Troop Members Only</h1>
-            <p>Welcome, scouts! This page is for troop members to access member-only resources, schedules, and announcements.</p>
+            <p>Welcome, scouts! This page is for troop members to access member-only resources, schedules, and updates.</p>
         </div>
+
+        <!-- Monday Memo -->
+        <section class="troop-info" style="text-align:left;">
+            <h2>Monday Memo</h2>
+            <p>Stay updated with troop news, changes in schedule, and leadership announcements. Example: "Next troop meeting is Tuesday, 9/3/24 at 7:30 PM."</p>
+        </section>
+
+        <!-- Meeting & Event Calendar -->
+        <section class="troop-info" style="text-align:left;">
+            <h2>Meeting & Event Calendar</h2>
+            <table style="width:100%; border-collapse: collapse;">
+                <tr>
+                    <th style="border:1px solid #fff; padding:8px;">Date</th>
+                    <th style="border:1px solid #fff; padding:8px;">Event</th>
+                    <th style="border:1px solid #fff; padding:8px;">Location</th>
+                </tr>
+                <tr>
+                    <td style="border:1px solid #fff; padding:8px;">9/3/24</td>
+                    <td style="border:1px solid #fff; padding:8px;">Troop Meeting</td>
+                    <td style="border:1px solid #fff; padding:8px;">Presbyterian Church</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid #fff; padding:8px;">9/15/24</td>
+                    <td style="border:1px solid #fff; padding:8px;">Camping Trip</td>
+                    <td style="border:1px solid #fff; padding:8px;">Hickory Park</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Forms & Documents -->
+        <section class="troop-info" style="text-align:left;">
+            <h2>Forms & Documents</h2>
+            <ul>
+                <li><a href="#">Permission Slip - Summer Camp 2026</a></li>
+                <li><a href="#">Merit Badge Sign-Up Form</a></li>
+                <li><a href="#">Troop Handbook</a></li>
+            </ul>
+        </section>
+
+        <!-- Resources -->
+        <section class="troop-info" style="text-align:left;">
+            <h2>Resources</h2>
+            <ul>
+                <li><a href="#">Scout Oath & Law</a></li>
+                <li><a href="#">First Aid Guide</a></li>
+                <li><a href="#">Camping Checklist</a></li>
+                <li><a href="#">Merit Badge Requirements</a></li>
+                <li><a href="#">Leadership Guide</a></li>
+            </ul>
+        </section>
     </div>
 
+    <!-- Footer -->
     <footer style="text-align:center; margin-top:40px; font-size:14px;">
         © 2026 Troop 63
     </footer>
