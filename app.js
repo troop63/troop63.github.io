@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateSlidePosition();
 
         // Auto-slide functionality
-        setInterval(nextSlide, 3000); // Change slide every 3 seconds
+        setInterval(nextSlide, 5000); // Change slide every 3 seconds
 
         // Handle resizing for responsive design
         window.addEventListener('resize', () => {
